@@ -1,0 +1,64 @@
+<div  fxLayout="row wrap" class="matero-row font-style">
+    <div [fxFlex.gt-sm]="25" [fxFlex]="100" class="matero-col pad-top-15 pad-left-15">
+        <mat-card [ngClass]="getClass(stockData.goog.change, stockData.goog.symbol)" class="card-height ">
+            <div class="d-flex_style">
+                <div class="div-points-style"><strong class=chat-name>{{ stockData.goog.name}}</strong></div>
+                <div class="div-points-style">${{ stockData.goog.curr_price | number: '1.1'}}</div>
+                <div class="div-points-style">{{ stockData.goog.d_high | number: '1.1'}}</div>
+                <div class="div-points-style">{{ stockData.goog.d_low | number: '1.1'}}</div>
+                <div class="div-points-style" *ngIf="!getIsMobileResolution()">{{ stockData.goog.w_52_high | number: '1.1'}}</div>
+                <div class="div-points-style" *ngIf="!getIsMobileResolution()">{{ stockData.goog.w_52_low | number: '1.1'}}</div>
+            </div>
+            <mat-card-actions class="action-card-style" align="center">
+                <span *ngIf="!stocksSlide.googSlide" style="color: #ecf0f1;">OFF</span>
+                <mat-slide-toggle [checked]="stocksSlide.googSlide" (change)="onSlideSlideChange($event, 'GOOG')"></mat-slide-toggle>
+                <span *ngIf="stocksSlide.googSlide" style="color: #34495e;">ON</span>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div [fxFlex.gt-sm]="25" [fxFlex]="100" class="matero-col pad-top-15 pad-left-15">
+        <mat-card [ngClass]="getClass(stockData.aapl.change, stockData.aapl.symbol)" class="card-height">
+            <div class="d-flex_style">
+                <div class="div-points-style"><strong class=chat-name>{{ stockData.aapl.name}}</strong></div>
+                <div class="div-points-style">${{ stockData.aapl.curr_price | number: '1.1'}}</div>
+                <div class="div-points-style">{{ stockData.aapl.d_high | number: '1.1'}}</div>
+                <div class="div-points-style">{{ stockData.aapl.d_low | number: '1.1'}}</div>
+                <div class="div-points-style" *ngIf="!getIsMobileResolution()">{{ stockData.aapl.w_52_high | number: '1.1'}}</div>
+                <div class="div-points-style" *ngIf="!getIsMobileResolution()">{{ stockData.aapl.w_52_low | number: '1.1'}}</div>
+            </div>
+            <mat-card-actions class="action-card-style" align="center">
+                <span *ngIf="!stocksSlide.aaplSlide" style="color: #ecf0f1;">OFF</span><mat-slide-toggle [checked]="stocksSlide.aaplSlide" (change)="onSlideSlideChange($event, 'AAPL')"></mat-slide-toggle><span *ngIf="stocksSlide.aaplSlide" style="color: #34495e;">ON</span>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div [fxFlex.gt-sm]="25" [fxFlex]="100" class="matero-col pad-top-15 pad-left-15">
+        <mat-card [ngClass]="getClass(stockData.msft.change, stockData.msft.symbol)" class="card-height">
+            <div class="d-flex_style">
+                <div class="div-points-style"><strong class=chat-name>{{ stockData.msft.name}}</strong></div>
+                <div class="div-points-style">${{ stockData.msft.curr_price | number: '1.1'}}</div>
+                <div class="div-points-style">{{ stockData.msft.d_high | number: '1.1'}}</div>
+                <div class="div-points-style">{{ stockData.msft.d_low | number: '1.1'}}</div>
+                <div class="div-points-style" *ngIf="!getIsMobileResolution()">{{ stockData.msft.w_52_high | number: '1.1'}}</div>
+                <div class="div-points-style" *ngIf="!getIsMobileResolution()">{{ stockData.msft.w_52_low | number: '1.1'}}</div>
+            </div>
+            <mat-card-actions class="action-card-style" align="center">
+                <span *ngIf="!stocksSlide.msftSlide" style="color: #ecf0f1;">OFF</span><mat-slide-toggle [checked]="stocksSlide.msftSlide" (change)="onSlideSlideChange($event, 'MSFT')"></mat-slide-toggle><span *ngIf="stocksSlide.msftSlide" style="color: #34495e;">ON</span>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div [fxFlex.gt-sm]="25" [fxFlex]="100" class="matero-col pad-top-15 pad-left-15 pad-right-15">
+        <mat-card [ngClass]="getClass(stockData.tsla.change, stockData.tsla.symbol)" class="card-height">
+            <div class="d-flex_style">
+                <div class="div-points-style"><strong class=chat-name>{{ stockData.tsla.name}}</strong></div>
+                <div class="div-points-style">${{ stockData.tsla.curr_price | number: '1.1'}}</div>
+                <div class="div-points-style">{{ stockData.tsla.d_high | number: '1.1'}}</div>
+                <div class="div-points-style">{{ stockData.tsla.d_low | number: '1.1'}}</div>
+                <div class="div-points-style" *ngIf="!getIsMobileResolution()">{{ stockData.tsla.w_52_high | number: '1.1'}}</div>
+                <div class="div-points-style" *ngIf="!getIsMobileResolution()">{{ stockData.tsla.w_52_low | number: '1.1'}}</div>
+            </div>
+            <mat-card-actions class="action-card-style" align="center">
+                <span *ngIf="!stocksSlide.tslaSlide" style="color: #ecf0f1;">OFF</span><mat-slide-toggle [checked]="stocksSlide.tslaSlide" (change)="onSlideSlideChange($event, 'TSLA')"></mat-slide-toggle><span *ngIf="stocksSlide.tslaSlide" style="color: #34495e;">ON</span>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

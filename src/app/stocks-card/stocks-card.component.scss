@@ -1,0 +1,66 @@
+.pad-top-15 {
+    padding-top: 15px;
+}
+
+.pad-right-15 {
+    padding-right: 15px;
+}
+
+.pad-left-15 {
+    padding-left: 15px;
+}
+
+.card-height {
+    height: 300px;
+}
+
+.mat-card {
+    color: #34495e;
+}
+
+.d-flex_style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.color-g {
+    background: #2ecc71;
+}
+
+.color-r {
+    background: #e74c3c;
+}
+
+.color-gr {
+    background: #ecf0f1;
+}
+
+.hover {
+    color: #1abc9c;
+}
+
+.chat-name {
+    display: inline-block;
+}
+
+.font-style {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.div-points-style {
+    padding: 8px;
+}
+
+.action-card-style {
+    padding: 15px;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: #34495e
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: #34495e
+}
